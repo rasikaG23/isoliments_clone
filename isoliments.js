@@ -26,3 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-slide functionality (set to slide every 3 seconds)
     setInterval(() => showSlide(currentIndex + 1), 3000);
 });
+
+
+
+
+function showTestimonial(index) {
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    
+    testimonials.forEach((testimonial, i) => {
+        if (i === index) {
+            testimonial.classList.add('active');
+            dots[i].classList.add('active');
+        } else {
+            testimonial.classList.remove('active');
+            dots[i].classList.remove('active');
+        }
+    });
+}
